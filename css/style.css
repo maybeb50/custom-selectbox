@@ -15,7 +15,7 @@ body {
 }
 
 .wrapper {
-    margin: 100px;
+    margin: 200px;
 }
 
 .wrapper h1 {
@@ -49,13 +49,14 @@ body {
     cursor: pointer;
     display: block;
     position: relative;
-    width: 130px;
-    padding: 15px 0 15px 10px;
-    border-radius: 4px;
-    font-size: 12px;
+    width: 100%;
+    min-width: 130px;
+    border-bottom: 2px solid #7f8897;
+    padding: 7px 0 7px 9px;
+    font-size: 13.3px;
     font-weight: 300;
-    color: #fff;
-    background-color: #3f51b5;
+    color: #7f8897;
+    background-color: #fff;
 }
 
 /* select-box arrow drawing */ 
@@ -64,15 +65,11 @@ body {
     display: block;
     position: absolute; 
     top: 50%;
-    right: 25px;
+    right: 1px;
     width: 10px;
-    height: 10px;
-    margin-top: -3px;
-    border-right: 2px solid #fff;
-    border-bottom: 2px solid #fff;
-    transform: rotate(45deg) translateY(-50%);
-    transition: all .4s ease-in-out;
-    transform-origin: 50% 0;
+    height: 5px;
+    margin-top: -2px;
+    background: url('../input-arrow.png') no-repeat;
 }
 
 .custom-options {
@@ -83,72 +80,77 @@ body {
     left: 0;
     right: 0;
     min-width: 100%;
-    margin: 15px 0;
-    border: 1px solid #b5b5b5;
-    border-radius: 4px;
+    margin: 0;
+    border: 1px solid #7b9dd4;
     box-sizing: border-box;
-    box-shadow: 0 2px 1px rgba(0, 0, 0, .7);
     background-color: #fff;
     pointer-events: none;
-    transform: translateY(-15px);
-    transition: all .4s ease-in-out;
-}
-
-/* options box arrow */ 
-.custom-options::before {
-    display: block;
-    content: '';
-    position: absolute;
-    bottom: 100%;
-    right: 25px;
-    width: 7px; 
-    height: 7px;
-    margin-bottom: -4px;
-    border-top: 1px solid #b5b5b5;
-    border-left: 1px solid #b5b5b5;
-    background: #fff;
-    transform: rotate(45deg);
-    transition: all .4s ease-in-out;
 }
 
 .custom-option {
     display: block;
     cursor: pointer;
     position: relative;
-    padding: 0 10px;
-    border-bottom: 1px solid #b5b5b5;
-    font-size: 12px;
-    line-height: 47px;
-    color: #b5b5b5;
-    transition: all .4s ease-in-out;
+    padding: 3px 0 5px 9px;
+    font-size: 13.3px;
+    line-height: 1;
+    color: #636a70;
+    /* transition: all .4s ease-in-out; */
 }
+
+.type-always {
+    display: inline-block;
+    width: 8px;
+    height: 8px;
+    margin-right: 4px;
+    border-radius: 100%;
+    background-color: #4c525c;
+    background-color: #73a3ac;
+}
+
+.type-pt {
+    display: inline-block;
+    width: 8px;
+    height: 8px;
+    margin-right: 4px;
+    border-radius: 100%;
+    background-color: #4c525c;
+    background-color: #7fb183;
+}
+
+.type-progress {
+    display: inline-block;
+    width: 8px;
+    height: 8px;
+    margin-right: 4px;
+    border-radius: 100%;
+    background-color: #4c525c;
+    background-color: #7b7fa7;
+}
+
+.type-suggest {
+    display: inline-block;
+    width: 8px;
+    height: 8px;
+    margin-right: 4px;
+    border-radius: 100%;
+    background-color: #4c525c;
+    background-color: #a088b0;
+}
+
 
 /* option selected css */ 
 .custom-option:hover, 
 .custom-option.selection {
-    background-color: #3f51b5;
-}
-
-.custom-options > .custom-option:first-child {
-    border-radius: 4px 4px 0 0;
-}
-
-.custom-options > .custom-option:last-child {
-    border-radius: 0 0 4px 4px;
-    border-bottom: 0;
+    background-color: #1e90ff;
+    color: #fff;
 }
 
 /* add class 'opened' css */
-.custom-select.opened .custom-select-trigger::after {
-    margin-top: 3px; 
-    transform: rotate(-135deg) translateY(-50%);
-}
-
-.custom-select.opened .custom-options {
+.opened .custom-options {
     opacity: 1;
     visibility: visible;
     pointer-events: all;
-    transform: translateY(0);
 }
 
 
